@@ -1,0 +1,42 @@
+﻿@model List<CochesModel>
+
+
+@*
+    
+*@
+@{
+
+}
+
+<a asp-controller="Crud" asp-action="Guardar" type="button" class="btn btn-success m-1">Guardar</a>
+<table id="example" class="table border-1">
+
+	<thead class="table-dark">
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Marca</th>
+			<th scope="col">Color</th>
+			<th scope="col">Placa</th>
+			<th scope="col">Precio</th>
+			<th scope="col">Acciones</th>
+		</tr>
+	</thead>
+	@foreach (var coches in Model)
+	{
+		<tbody>
+			<tr>
+				<td>@coches.id</td>
+				<td>@coches.nombre</td>
+				<td>@coches.marca</td>
+				<td>@coches.color</td>
+				<td>@coches.placa</td>
+				<td>@coches.precio</td>
+				<td>
+					<a type="button" class="btn btn-danger m-1" asp-action="eliminar" asp-controller="crud" asp-route-id="@coches.id">Eliminar</a>
+					<a type="button" class="btn btn-info" asp-action="editar" asp-controller="crud" asp-route-id="@coches.id">Editar</a>
+				</td>
+			</tr>
+		</tbody>
+	}
+</table>

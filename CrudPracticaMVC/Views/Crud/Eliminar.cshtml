@@ -1,0 +1,12 @@
+﻿@model CochesModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Eliminar</h1>
+<form asp-action="Eliminar" asp-controller="Crud" method="post">
+    <input type="hidden" asp-for="id" class="form-control" />
+    <button type="submit" class="btn btn-success">Eliminar</button>
+</form>

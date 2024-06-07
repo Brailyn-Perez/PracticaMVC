@@ -1,0 +1,31 @@
+﻿@model CochesModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Editar" asp-controller="Crud" method="post">
+    <input type="hidden" asp-for="id" class="form-control" />
+    <div class="mb-3">
+        <h2>Editar un vehiculo</h2>
+        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marca</label>
+        <input type="text" class="form-control" asp-for="marca">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Color</label>
+        <input type="text" class="form-control" asp-for="color">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Placa</label>
+        <input type="text" class="form-control" asp-for="placa">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Precio</label>
+        <input type="text" class="form-control" asp-for="precio">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
